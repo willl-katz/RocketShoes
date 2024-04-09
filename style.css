@@ -1,0 +1,365 @@
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f3f3f5;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+  
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--button);
+    border: 1px solid transparent;
+}
+
+.container {
+    width: 100%;
+}
+
+.page-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+li, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+
+/* ------------- Header ------------- */
+
+header .container .page-wrap {
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+header .container .page-wrap .navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+header .container .page-wrap .navegacao nav ol {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+header .container .page-wrap a img {
+    height: 36.4px;
+}
+
+header .container .page-wrap .navegacao a img {
+    height: 28px;
+}
+
+header .container .page-wrap .navegacao nav ol li {
+    font-weight: 700;
+    transition: 0.1s ease-in;
+}
+
+header .container .page-wrap .navegacao nav ol li:hover {
+    color: var(--button);
+}
+
+header .container .page-wrap .navegacao .box-search {
+    position: relative;
+    background-color: white;
+    width: 210px;
+    padding: 8px 14px;
+}
+
+header .container .page-wrap .navegacao .box-search input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding-left: 22px;
+}
+
+header .container .page-wrap .navegacao .box-search .icon-search {
+    position: absolute;
+    left: 11px;
+    top: 8 px;
+    height: 18px;
+}
+
+/* ------------- Produto ------------- */
+
+.produto .container .page-wrap {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+.produto .container .page-wrap .tema-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.produto .container .page-wrap .tema-produto h1 {
+    font-weight: 700;
+    font-size: 40px;
+    padding-right: 100px;
+}
+
+.produto .container .page-wrap .tema-produto h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.produto .container .page-wrap .tema-produto a {
+    width: 178.03px;
+}
+
+.produto .container .page-wrap .tema-produto a button {
+    background-color: var(--button);
+    color: var(--background);
+    border: none;
+    padding: 16px 55px;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.produto .container .page-wrap .tema-produto p {
+    font-size: 16px;
+    color: var(--text-description);
+    padding-right: 120px;
+}
+
+.produto .container .page-wrap .imagens-produto {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.produto .container .page-wrap .imagens-produto:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: var(--background);
+    width: 120%;
+    height:  116%;
+    top: -80px;
+    left: -30px;
+}
+
+.produto .container .page-wrap .imagens-produto .lista-imagem-produto {
+    display: flex;
+    gap: 34px;
+}
+
+.produto .container .page-wrap .imagens-produto .lista-imagem-produto img {
+    width: 210px;
+    position: relative;
+    cursor: pointer;
+}
+
+.produto .container .page-wrap .imagens-produto .lista-imagem-produto.before1:before{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background-color: red;
+    left: 0;
+    bottom: 0;
+    width: 210px;
+    height: 4px;
+    animation: carregar1 0.2s ease-in;
+}
+
+.produto .container .page-wrap .imagens-produto .lista-imagem-produto.before2:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background-color: red;
+    left: 244px;
+    bottom: 0;
+    width: 210px;
+    height: 4px;
+    animation: carregar2 0.2s ease-in;
+}
+
+.produto .container .page-wrap .imagens-produto .lista-imagem-produto.before3:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background-color: red;
+    left: 488px;
+    bottom: 0;
+    width: 210px;
+    height: 4px;
+    animation: carregar3 0.2s ease-in;
+}
+
+@keyframes carregar1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 210px;
+    }
+}
+
+@keyframes carregar2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 210px;
+    }
+}
+
+@keyframes carregar3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 210px;
+    }
+}
+
+
+.produto .container .page-wrap .imagens-produto .zoom {
+    overflow: hidden;
+}
+
+.produto .container .page-wrap .imagens-produto .zoom img {
+    -moz-transition: ease-in-out 2s;
+    -webkit-transition: ease-in-out 2s;
+    transition: ease-in-out 2s;
+}
+
+.produto .container .page-wrap .imagens-produto .zoom:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* ------------- Footer ------------- */
+
+footer .container .page-wrap {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 140px;
+}
+
+footer .container .page-wrap .redes-sociais nav ol {
+    display: flex;
+    gap: 90px;
+}
+
+footer .container .page-wrap .redes-sociais nav ol a li {
+    font-weight: 700;
+    transition: 0.1s ease-in;
+}
+
+footer .container .page-wrap .redes-sociais nav ol a li:hover {
+    color: var(--button);
+}
+
+footer .container .page-wrap .botao-explore {
+    background-color: var(--footer);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 400px;
+    transition: 0.1s ease-in;
+}
+
+footer .container .page-wrap .botao-explore:hover {
+    background-color: var(--button);
+}
+
+footer .container .page-wrap .botao-explore a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+footer .container .page-wrap .botao-explore a button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+footer .container .page-wrap .botao-explore a img {
+    padding-top: 6px;
+}
+
+footer .container .page-wrap .video{
+    display: flex;
+    justify-content: center;
+}
+
+footer .container .page-wrap .video img {
+    height: 140px;
+    cursor: pointer;
+}
+
+footer .container .page-wrap .video .pop-video {
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000bb;
+}
+
+footer .container .page-wrap .video .pop-video video {
+    height: 500px;
+    position: relative;
+    border-radius: 4px;
+}
+
+footer .container .page-wrap .video .pop-video .close {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+}
